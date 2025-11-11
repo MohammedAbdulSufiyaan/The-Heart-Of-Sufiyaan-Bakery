@@ -19,8 +19,8 @@ import { useSelector } from "react-redux";
 import Imsautocomplete from "../Imsautocomplete";
 import { textTransform } from "@mui/system";
 import { useNavigate } from "react-router-dom";
-const pages = ["Cake", "Flowers", "Icecream", "Birthday", "Chocolates","Users"];
-const settings = ["Profile", "Account", "Dashboard", "Logout", "login"];
+const pages = ["Cake", "Flowers", "Icecream", "Birthday", "Chocolates"];
+const settings = ["About Website"];
 function Sna(props) {
   const cakes = useSelector((state) => state.cake.orderedCakes);
   const flowers = useSelector((state) => state.flower.orderedFlowers);
@@ -66,23 +66,27 @@ function Sna(props) {
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Link to="/" style={{ textDecoration: "none" }}></Link>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            SuFiYaAn Bakery 🎂🎉🎁 
-          </Typography>
+         <Typography
+  variant="h6"
+  component="a"
+  href="/"
+  sx={{
+    mr: 2,
+    display: { xs: "none", md: "flex" },
+    fontFamily: "monospace",
+    fontWeight: 700,
+    letterSpacing: ".15rem",
+    color: "inherit",
+    textDecoration: "none",
+    fontSize: { xs: "0.8rem", sm: "1rem", md: "1.1rem" },
+    whiteSpace: "normal",      // 👈 allow wrapping
+    wordBreak: "break-word",   // 👈 break long text if needed
+    lineHeight: 1.3,           // 👈 better spacing for two lines
+    maxWidth: "400px",         // 👈 limit width so it wraps nicely
+  }}
+>
+The Heart of Sufiyaan Bakery —For Testing & Demo Purpose Only - Not For Sale
+</Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -157,12 +161,12 @@ function Sna(props) {
             ))}
           </Box>
           <Box sx={{ bgcolor: "white" }}>
-            <Imsautocomplete />
+            {/* <Imsautocomplete /> */}
           </Box>
           <Link to="/cart">
-            <IconButton aria-label="ViewCart">
+            {/* <IconButton aria-label="ViewCart">
               <Icart badgeContent={sum} />
-            </IconButton>
+            </IconButton> */}
           </Link>
           <Button variant="contained"onClick={()=>navigate("/Signup")}>
             Signup
@@ -172,7 +176,7 @@ function Sna(props) {
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Sufiyaan"
-              src="https://www.filmibeat.com/ph-big/2019/02/mahesh-babu_155056989980.jpg"
+              // src="https://www.filmibeat.com/ph-big/2019/02/mahesh-babu_155056989980.jpg"
 />
               </IconButton>
             </Tooltip>

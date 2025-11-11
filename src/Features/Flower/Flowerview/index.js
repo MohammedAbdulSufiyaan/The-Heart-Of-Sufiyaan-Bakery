@@ -155,22 +155,22 @@ export default function FlowerView(props){
     })
   }
 </Grid>
-        <h2>numOfFlowers{numOfFlowers}</h2>
-        <Icart badgeContent={orderedFlowers}></Icart>
+        {/* <h2>numOfFlowers{numOfFlowers}</h2>
+        <Icart badgeContent={orderedFlowers}></Icart> */}
         <Button variant="outlined" onClick={handleClick}>
-        Open success snackbar
+        Order Flowers
       </Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          This is a success message!
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+      Ordering is temporarily unavailable. We will be back soon
         </Alert>
       </Snackbar>
-        <Button
+        {/* <Button
              onClick={()=>{
                   dispatch(restocked(10))
         }}>
             restock flowers
-        </Button>
+        </Button> */}
         </>
     )
 }

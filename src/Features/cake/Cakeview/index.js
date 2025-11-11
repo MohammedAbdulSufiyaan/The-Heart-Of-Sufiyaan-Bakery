@@ -227,22 +227,22 @@ act:"secondary"
 
 
 
-        <h2>numOfCakes{numOfCakes}</h2>
-        <Icart badgeContent={orderedCakes}></Icart>
+        {/* <h2>numOfCakes{numOfCakes}</h2> */}
+        {/* <Icart badgeContent={orderedCakes}></Icart> */}
         <Button variant="outlined" onClick={handleClick }>
         Order Cakes
       </Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          Your order is placed!
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+      Ordering is temporarily unavailable. We will be back soon
         </Alert>
       </Snackbar>
-        <Button
+        {/* <Button
              onClick={()=>{
                   dispatch(restocked(10))
         }}>
             restock cakes
-        </Button>
+        </Button> */}
         </>
     )
 }

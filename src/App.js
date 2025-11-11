@@ -13,7 +13,7 @@ import Signup from './Pages/Signup';
 import Users from './Pages/Users';
 function App() {
 
-  let p1 =['Cake','Flowers','Icecream','Birthday','Chocolates','Users'];
+  let p1 =['Cakes','Flowers','IceCreams','BirthdayCakes','Chocolates'];
   return (
     
     
@@ -21,12 +21,12 @@ function App() {
      <BrowserRouter>
      <Sna pages={p1}></Sna>
   <Routes>
-  <Route path='Cake'element={<Cake/>}/>
+  <Route path='Cakes'element={<Cake/>}/>
   <Route path='Flowers'element={<Flowers/>}/>
-  <Route path='Birthday'element={<Birthday/>}/>
-  <Route path='Icecream'element={<Icecream/>}/>
+  <Route path='BirthdayCakes'element={<Birthday/>}/>
+  <Route path='IceCreams'element={<Icecream/>}/>
   <Route path='Chocolates'element={<Chocolate/>}/>
-  <Route path='/cart' element={<Viewcart/>}/>
+  {/* <Route path='/cart' element={<Viewcart/>}/> */}
   <Route path='/' element={<Chocolate/>}/>
   <Route path='/Signup' element={<Signup/>}/>
   <Route path='/Users'element={<Users/>}/>

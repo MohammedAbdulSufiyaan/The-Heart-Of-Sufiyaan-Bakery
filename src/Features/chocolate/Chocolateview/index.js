@@ -84,21 +84,21 @@ import Flowercard from '../../../Component/Flowercard';
         act:"secondary"
       },
       {
-        title:"chocolate10",
+        title:"chocolate8",
         photo:chocolate10,
         price:789,
         label:"Best seller",
         act:"success"
       },
       {
-        title:"chocolate11",
+        title:"chocolate9",
         photo:chocolate11,
         price:432,
         label:"Few left",
         act:"secondary"
       },
       {
-        title:"chocolate12",
+        title:"chocolate10",
         photo:chocolate12,
         price:124,
         label:"Best seller",
@@ -161,22 +161,23 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 
 
 
-        <h2>numOfChocolates{num1}</h2>
-        <Icart badgeContent={orderedChocolates}></Icart>
+        {/* <h2>numOfChocolates{num1}</h2>
+        <Icart badgeContent={orderedChocolates}></Icart> */}
         <Button variant="outlined" onClick={handleClick }>
         Order Chocolates
       </Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          Your order is placed!
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+             Ordering is temporarily unavailable. We will be back soon
+
         </Alert>
       </Snackbar>
-        <Button
+        {/* <Button
              onClick={()=>{
                   dispatch(restocked(10))
         }}>
             restock chocolates
-        </Button>
+        </Button> */}
         </>
     )
 }
